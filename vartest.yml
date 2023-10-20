@@ -7,6 +7,9 @@
     machine1:
       username: "{{ ansible_user }}"
       password: "{{ ansible_password }}"
+    joe_machine:
+      username: "{{ ansible_user }}"
+      password: "{{ ansible_password }}"
 
     
   tasks:
@@ -14,6 +17,8 @@
       debug:
         msg:
         - "machine1 username {{ machine1['username'] }}"
+        - "machine1 password {{ machine1['password'] }}"
+        - "joe_machine username {{ joe_machine['username'] }}"
         # - "valut1 username {{ vault1['password'] }}"
 
 
