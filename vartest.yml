@@ -7,15 +7,14 @@
     machine1:
       username: "{{ ansible_user }}"
       password: "{{ ansible_password }}"
-    vault1:
-      password: "{{ vault_password  }}"
+
     
   tasks:
     - name: display creds
       debug:
         msg:
         - "machine1 username {{ machine1['username'] }}"
-        - "valut1 username {{ vault1['password'] }}"
+        # - "valut1 username {{ vault1['password'] }}"
 
 
   
