@@ -1,0 +1,27 @@
+---
+- name: var test
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    machine1:
+      username: "{{ ansible_user }}"
+      password: "{{ ansible_password }}"
+    vault1:
+      password: "{{ vault_password  }}"
+    
+  tasks:
+    - name: display creds
+      debug:
+        msg:
+          - {{ machine1['username'] }}
+          - {{ vault1['password'] }}
+
+
+  
+    # - name: add dummy_host
+    #   add_host:
+    #   name: "dummy"
+    #   user: "{{ ansible_user }}"
+    #   password: "{{ ansible_password }}"
+
