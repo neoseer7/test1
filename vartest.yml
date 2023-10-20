@@ -14,8 +14,8 @@
     - name: display creds
       debug:
         msg:
-          - {{ machine1['username'] }}
-          - {{ vault1['password'] }}
+        - "machine1 username {{ machine1['username'] }}"
+        - "valut1 username {{ vault1['password'] }}"
 
 
   
