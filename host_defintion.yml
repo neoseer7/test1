@@ -1,6 +1,6 @@
 ---
 - name: hostdef test
-  hosts: {{ switch }}
+  hosts: "{{ switch }}"
   gather_facts: no
 
 
