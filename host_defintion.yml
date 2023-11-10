@@ -1,0 +1,10 @@
+---
+- name: hostdef test
+  hosts: {{ switch }}
+  gather_facts: no
+
+
+  tasks:
+    debug: var=ansible_host
+
+
