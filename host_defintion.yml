@@ -5,6 +5,6 @@
 
 
   tasks:
-    debug: var=ansible_host
+    - debug: var=ansible_host
 
 
